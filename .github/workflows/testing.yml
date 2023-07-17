@@ -1,0 +1,11 @@
+name: Test React App
+on: push    # When user make push
+jobs: 
+  runs-on: ubuntu-latest 
+  steps: 
+   - name: Get the repository code # Name of action
+     uses: actions/checkout@v3 
+   - name: Install depend
+     run: npm ci
+   - name: Test Aplictaion
+     run: npm run test
